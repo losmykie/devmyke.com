@@ -22,10 +22,22 @@
             box-sizing: border-box;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").on('click', function(e) {
+                e.preventDefault();
+                var pageUrl = $(this).attr('href');
+                $(".right-side").load(pageUrl);
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="left-side">
-        <!-- content for the left side goes here -->
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <!-- more links can be added here -->
     </div>
     <div class="right-side">
         <!-- content for the right side goes here -->
